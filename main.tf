@@ -6,6 +6,7 @@ resource "random_id" "example" {
   byte_length = 8
 }
 
+
 output "example" {
   value = "${random_id.example.hex}"
 }
