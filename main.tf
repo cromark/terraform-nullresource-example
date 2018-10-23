@@ -1,5 +1,5 @@
 module "nullresource" {
-  source  = "v201808-1-external.ptfe.host/test/nullresource/aws"
+  source  = "localterraform.com/test/nullresource/aws"
   version = "0.0.1"
 }
 
