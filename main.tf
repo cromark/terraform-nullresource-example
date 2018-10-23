@@ -1,12 +1,9 @@
-resource "random_id" "example" {
-  keepers {
-    uuid = "${uuid()}"
-  }
-
-  byte_length = 8
+module "nullresource" {
+  source  = "v201808-1-external.ptfe.host/test/nullresource/aws"
+  version = "0.0.1"
 }
 
 
 output "example" {
-  value = "${random_id.example.hex}"
+  value = "${module.nullresource.example.hex}"
 }
