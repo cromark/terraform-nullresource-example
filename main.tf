@@ -5,5 +5,5 @@ module "nullresource" {
 
 
 output "example" {
-  value = "${module.nullresource.example.hex}"
+  value = "${module.nullresource.example}"
 }
