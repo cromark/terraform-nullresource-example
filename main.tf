@@ -1,7 +1,8 @@
-provisioner "local-exec" {
-  command = "cat $HOME/.terraformrc"
+resource "null_resource" "cluster" {
+    provisioner "local-exec" {
+      command = "cat $HOME/.terraformrc"
+    }
 }
-
 #module "nullresource" {
 #  source  = "localterraform.com/test/nullresource/aws"
 #  version = "0.0.1"
