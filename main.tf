@@ -1,7 +1,10 @@
-resource "null_resource" "cluster" {
-    provisioner "local-exec" {
-      command = "cat $HOME/.terraformrc"
-    }
+data "local_file" "foo" {
+    filename = "/tmp/cli.tfrc"
+}
+
+
+output "lol" {
+  value = "${data.local_file.foo.content}"
 }
 #module "nullresource" {
 #  source  = "localterraform.com/test/nullresource/aws"
