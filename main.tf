@@ -8,7 +8,7 @@ output "lol" {
 }
 
 module "nullresource" {
-  source  = "localterraform.com/test/nullresource/aws"
+  source  = "v201808-1-external.ptfe.host/test/nullresource/aws"
   version = "0.0.1"
 }
 
