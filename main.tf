@@ -7,9 +7,14 @@ output "lol" {
   value = "${data.local_file.foo.content}"
 }
 
+variable "lol" {
+  type = "string"
+  default = "0.0.1"
+}
+
 module "nullresource" {
-  source  = "v201808-1-external.ptfe.host/test/nullresource/aws"
-  version = "0.0.1"
+  source  = "lab1.ptfe.host/test/nullresource/aws"
+  version = "${var.lol}"
 }
 
 
