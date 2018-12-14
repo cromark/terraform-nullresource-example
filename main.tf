@@ -2,6 +2,9 @@ data "local_file" "foo" {
     filename = "/tmp/cli.tfrc"
 }
 
+variable "lol" {
+  description = "this should not be optional"
+}
 
 output "lol" {
   value = "${data.local_file.foo.content}"
