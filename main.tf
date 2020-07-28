@@ -24,3 +24,7 @@
 resource "random_pet" "console_password" {
     length = 5
 }
+
+output "lol" {
+    value = "${random_pet.console_password.id}"
+}
