@@ -1,34 +1,16 @@
-#data "local_file" "foo" {
-#    filename = "/tmp/cli.tfrc"
-#}
-#
-#variable "lol" {
-#  description = "this should not be optional"
-#}
-#
-#
-#output "lol" {
-#  value = "${data.local_file.foo.content}"
-#}
-#
-#module "nullresource" {
-#  source  = "localterraform.com/test/nullresource/aws"
-#  version = "0.0.1"
-#}
-#
-#
-#output "example" {
-#  value = "${module.nullresource.example}"
-#}
+provider null {}
 
-resource "random_pet" "console_password" {
-    length = 4
+resource "null_resource" "test0" {
+}
+resource "null_resource" "test1" {
 }
 
-output "lol" {
-    value = "${random_pet.console_password.id}"
+resource "null_resource" "test2" {
 }
 
-output "rofl" {
-    value = "${random_pet.console_password.id}"
+output "id0" {
+  value = "${null_resource.test0.id}"
+}
+output "id1" {
+  value = "${null_resource.test1.id}"
 }
